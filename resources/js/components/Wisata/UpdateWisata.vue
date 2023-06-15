@@ -83,7 +83,7 @@ export default {
   methods: {
     async fetchData() {
       this.itemID = this.$route.params.id;
-      const response = await axios.get(`/api/wisata/${this.itemID}`);
+      const response = await axios.get(`https://wisata.surabayawebtech.com/api/wisata/${this.itemID}`);
       this.items = response.data.data;
     },
     updateWisata() {
@@ -95,7 +95,7 @@ export default {
       formData.append("lokasi", this.items.lokasi);
 
       axios
-        .post(`/api/wisata/${this.itemID}`, formData)
+        .post(`https://wisata.surabayawebtech.com/api/wisata/${this.itemID}`, formData)
         .then(response => {
           console.log(response);
           this.showAlert();

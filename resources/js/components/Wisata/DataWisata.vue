@@ -70,12 +70,12 @@
     },
     methods: {
       async fetch() {
-        const response = await axios.get("/api/destinasi");
+        const response = await axios.get("https://wisata.surabayawebtech.com/api/destinasi");
         this.destinasis = response.data.data;
       },
   
       async fetchData() {
-        const response = await axios.get("/api/wisata");
+        const response = await axios.get("https://wisata.surabayawebtech.com/api/wisata");
         this.items = response.data.data;
       },
   
@@ -91,7 +91,7 @@
         });
   
         if (result.isConfirmed) {
-          await axios.delete(`/api/wisata/${id}`);
+          await axios.delete(`https://wisata.surabayawebtech.com/api/wisata/${id}`);
           this.fetchData();
   
           Swal.fire("Deleted!", "The data has been deleted.", "success");
