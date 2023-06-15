@@ -66,7 +66,7 @@
 export default {
   methods: {
     logout() {
-      axios.post('/logout')
+      axios.post('https://wisata.surabayawebtech.com/logout')
         .then(response => {
           // Menghandle respon logout yang sukses
           console.log(response.data.message);

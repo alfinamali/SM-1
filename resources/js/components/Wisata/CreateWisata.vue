@@ -85,7 +85,7 @@ export default {
         formData.append("lokasi", this.form.lokasi);
 
         axios
-            .post("/api/wisata", formData)
+            .post("https://wisata.surabayawebtech.com/api/wisata", formData)
             .then((response) => {
             console.log(response);
             // reset form
@@ -113,7 +113,7 @@ export default {
         this.form.images = this.$refs.myImage.files[0];
         },
         async fetchData() {
-        const response = await axios.get("/api/destinasi");
+        const response = await axios.get("https://wisata.surabayawebtech.com/api/destinasi");
         this.destinasis = response.data.data;
     },
     },
