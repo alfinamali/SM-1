@@ -40,7 +40,7 @@
         },
         methods:{
             async fetchData() {
-            const response = await axios.get("https://wisata.surabayawebtech.com/api/destinasi");
+            const response = await axios.get("/api/destinasi");
             this.destinasis = response.data.data;
         },
             

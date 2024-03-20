@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     login() {
-      axios.post('https://wisata.surabayawebtech.com/api/login', {
+      axios.post('/api/login', {
         email: this.email,
         password: this.password
       })
